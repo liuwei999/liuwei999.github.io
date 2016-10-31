@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>迈思设计</title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+			font-family:"微软雅黑";
+		}
+		a{
+			text-decoration:none;
+		}
+		ul li{
+			list-style:none;
+		}
+		.clearfix:before,.clearfix:after{
+			clear:both;
+			display:block;
+			content:"";
+		}
+		#top{
+			width:100%;
+		}
+		#top h1{
+			width:179px;
+			height:40px;
+			position:fixed;
+			top:0;
+			left:0;
+		}
+		#top .scroll{
+			width:560px;
+			height:40px;
+			position:fixed;
+			top:0;
+			left:179px;
+			overflow:hidden;
+		}
+		.scroll .list{
+			width:560px;
+			height:240px;
+		}
+		.list li{
+			height:40px;
+			text-align:left;
+			line-height:40px;
+			list-style:none;
+			
+		}
+		.list li a{
+			font-family:"黑体";
+			color:#cae;
+			text-decoration:none;
+		}
+
+		#logoNav{
+			height:200px;
+			margin-top:40px;
+			background:url(images/bg.jpg) repeat-x center 0;
+		}
+		.logo{
+			width:960px;
+			padding:10px 0;
+			margin:0 auto;
+		}
+		.nav{
+			width:972px;
+			margin:0 auto;
+		}
+		.nav li{
+			float:left;
+			width:160px;
+			height:80px;
+			margin-left:1px;
+			margin-right:1px;
+			position:relative;
+		}
+		.nav li a img{
+			position:absolute;
+			left:center;
+			bottom:0;
+			width:0px;
+			height:0px;
+		}
+		.nav li span{
+			display:block;
+			width:160px;
+			height:80px;
+			color:#fff;
+			font-size:24px;
+			background:url(images/bg.jpg) no-repeat center 0;
+			text-align:center;
+			line-height:80px;
+			position:absolute;
+			top:0;
+			left:0;
+			z-index:99;
+		}
+		.nav li .box2{
+			width:170px;
+			height:140px;
+			font-size:15px;
+			text-align:center;
+			line-height:26px;
+			padding-top:20px;
+			background-color:#000;
+			position:absolute;
+			top:80px;
+			left:160px;
+			display:none;
+			z-index:99;
+		}
+		#banner{
+			width:100%;
+			height:528px;
+		}
+		.banner-in{
+			width:100%;
+			position:relative; 
+			overflow:hidden;
+		}
+		.banner-in .left{
+			position:absolute;
+			top:230px;
+			left:0;
+		}
+		.banner-in .right{
+			position:absolute;
+			top:230px;
+			right:0;
+		}
+		.picBox{
+			width:960px;
+			margin:0 auto;
+		}
+		.banner-in .pic-list{
+			width:5760px;
+		}
+		.banner-in .pic-list li{
+			float:left;
+		}
+
+		#main{
+			width:100%;
+			background:url(images/bg.jpg) no-repeat center 0;
+		}
+		.content{
+			width:960px;
+			margin:0 auto;
+		}
+		.content div{
+			width:280px;
+			height:322px;
+			float:left;
+			padding:0px 10px;
+			margin-right:20px;
+			overflow:hidden;
+		}
+		.content div h4{
+			color:#fff;
+			font-size:20px;
+			font-weight:normal;
+			padding:10px 10px;
+			background:url(images/hbg_03.jpg) no-repeat left 16px;
+		}
+		.content div p{
+			color:#aaf;
+			font-size:14px;
+		}
+		.content div .active{
+			display:block;
+			width:100px;
+			height:40px;
+			text-align:center;
+			line-height:40px;
+			font-size:14px;
+			border:1px solid #999;
+			background-color:#aee;
+			font-family:"微软雅黑";
+			margin-top:20px;
+		}
+		.content div .imgBox{
+			width:100%;
+			height:100%;
+		}
+		.content div .imgBox img{
+			width:100%;
+		}
+		.content div .list-2{
+			margin-top:10px;
+		}
+		.content div .list-2 li{
+			font-size:14px;
+			color:#aac;
+			line-height:20px;
+		}
+		#footer{
+			width:100%;
+			height:200px;
+			background:url(images/background.gif);
+		}
+		.footer-in{
+			width:960px;
+			margin:0 auto;
+			/*overflow:hidden;*/
+		}
+		.footer-in p{
+			padding:10px 10px;
+			color:#aac;
+			background:url(images/hbg_03.jpg) no-repeat left 14px;
+		}
+		
+		.logo-list{
+			width:1760px;
+			height:85px;
+			list-style:none;
+		}
+		.logo-list li{
+			width:160px;
+			float:left;
+			margin-left:10px;
+		}
+	</style>
+
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="js/jquery.marquee.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/maisi.js"></script>
+</head>
+<body>
+	<div id="top">
+		<h1>
+			<a href="#">
+				<img src="images/title_02.gif" alt="">
+			</a>
+		</h1>
+		<div class="scroll">
+			<ul class="list">
+				<li>
+					<a href="#">
+						欢迎光临迈思设计工作室，我们将竭诚为您服务
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						中企动力 个性设计.尽在迈思设计 联系电话：400-1022-886
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						aefklejljh'efkjglkejkfghkejflkgj3ioghd
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						中企动力 个性设计.尽在迈思设计 联系电话：400-1022-886
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						欢迎光临迈思设计工作室，我们将竭诚为您服务
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						迈思设计 引领时尚潮流
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="logoNav">
+		<div class="logo">
+			<img src="images/title.png" alt="">
+		</div>
+		<ul class="nav">
+			<li>
+				<a href="#"><img src="images/1.jpg" alt=""></a>
+				<span>关于我们</span>
+				<div class="box2">
+					<a href="#">logo及相关应用设计</a><br>
+					<a href="#">各类标识及向导系统</a><br>
+					<a href="#">内部包装设计制作</a><br>
+					<a href="#">淘宝美工相关设计</a><br>
+				</div>
+			</li>
+			<li>
+				<a href="#"><img src="images/2.jpg" alt=""></a>
+				<span>平面设计</span>
+				<div class="box2">
+					<a href="#">logo及相关应用设计</a><br>
+					<a href="#">各类标识及向导系统</a><br>
+					<a href="#">内部包装设计制作</a><br>
+					<a href="#">淘宝美工相关设计</a><br>
+				</div>	
+			</li>
+			<li>
+				<a href="#"><img src="images/3.jpg" alt=""></a>
+				<span>网站建设</span>
+				<div class="box2">
+					<a href="#">logo及相关应用设计</a><br>
+					<a href="#">各类标识及向导系统</a><br>
+					<a href="#">内部包装设计制作</a><br>
+					<a href="#">淘宝美工相关设计</a><br>
+				</div>	
+			</li>
+			<li>
+				<a href="#"><img src="images/4.jpg" alt=""></a>
+				<span>商业摄影</span>
+				<div class="box2">
+					<a href="#">logo及相关应用设计</a><br>
+					<a href="#">各类标识及向导系统</a><br>
+					<a href="#">内部包装设计制作</a><br>
+					<a href="#">淘宝美工相关设计</a><br>
+				</div>
+			</li>
+			<li>
+				<a href="#"><img src="images/5.jpg" alt=""></a>
+				<span>商业插画</span>
+				<div class="box2">
+					<a href="#">logo及相关应用设计</a><br>
+					<a href="#">各类标识及向导系统</a><br>
+					<a href="#">内部包装设计制作</a><br>
+					<a href="#">淘宝美工相关设计</a><br>
+				</div>
+			</li>
+			<li class="last">
+				<a href="#"><img src="images/6.jpg" alt=""></a>
+				<span>活动策划</span>
+				<div class="box2">
+					<a href="#">logo及相关应用设计</a><br>
+					<a href="#">各类标识及向导系统</a><br>
+					<a href="#">内部包装设计制作</a><br>
+					<a href="#">淘宝美工相关设计</a><br>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div id="banner">
+		<div class="banner-in">
+			<img class="left" src="images/left.gif" alt="">
+			<img class="right" src="images/right.gif" alt="">
+			<div class="picBox">
+				<ul class="pic-list">
+					<li><a href="#"><img src="images/0001.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/002.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/003.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/0004.gif" alt=""></a></li>
+					<li><a href="#"><img src="images/weibo.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/zhaopin.jpg" alt=""></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="main" class="clearfix">
+		<div class="content clearfix">
+			<div class="jianjie clearfix">
+				<h4>公司简介</h4>
+				<p>迈思设计，成立于2010年4月，是苏州首个集企业品牌策划、设计、设计、制作、推广的CG类工作室。</p>
+				<p>多年来迈思终以中企动力为使命，以提升企业形象，增强企业综合竞争力为己任，致力于专为中小企业提供全方位品牌包装、推广服务的社会化创新平台</p>
+				<p>我们怀揣年轻的激情，运用创新的技术，稳健快速的发展着。公司核心业务包括平面印刷、建站推广、宣传片制作、商业活动策划与执行...</p>
+				<a class="active" href="#">
+					了解更多>>
+				</a>
+			</div>
+			<div class="wenhua clearfix">
+				<h4>公司文化</h4>
+				<div class="imgBox">
+					<img src="images/wenhua.jpg" alt="无法显示图片">
+				</div>
+				<p class="clearfix">迈思设计价值观</p>
+				<ul class="list-2 clearfix">
+					<li>守正▪恪守正道是迈思人的做人的准则<li>
+					<li>出奇▪出奇制胜是迈思人的做事的方式</li>
+					<li>简单▪简至极致是迈思人追求的境界</li>
+					<li>迅猛▪迅速凶猛是迈思对狼性文化的传承...</li>
+				</ul>
+			</div>
+			<div class="clearfix">
+				<h4>迈思团队</h4>
+				<img src="images/us.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	<div id="footer" class="clearfix">
+		<div class="footer-in clearfix">	
+			<p>合作企业</p>
+			<div class="scrollBox">
+				<ul class="logo-list clearfix">
+					<li><a href="#"><img src="images/logo/bz.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/logo/csrs.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/logo/fdzd.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/logo/hz.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/logo/jsdt.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/logo/shxm.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/logo/szkjxy.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/logo/tpy.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/logo/tzjy.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/logo/wgy.jpg" alt=""></a></li>
+				</ul>	
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
